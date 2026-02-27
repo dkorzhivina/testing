@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="#" class="logo">MyStore</a>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="filters">
+        <input 
+            type="text" 
+            class="input" 
+            id="search" 
+            placeholder="Поиск" />
+
+        <select class="select" id="sort">
+            <option value="popular">По популярности</option>
+            <option value="price-asc">Дешевле</option>
+            <option value="price-desc">Дороже</option>
+        </select>
+        
+        <label class="toggle">
+            <input type="checkbox" id="available" />
+            <span>Только в наличии</span>
+        </label>
+    </section>
+
+    <section class="grid" id="grid"></section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

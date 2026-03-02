@@ -36,7 +36,7 @@ export async function fetchUsers({ page = 1, search = "" } = {}, signal) {
     );
   }
 
-  const perPage = 6;
+  const perPage = 10;
   const total = all.length;
   const totalPages = Math.max(1, Math.ceil(total / perPage));
   const safePage = Math.min(Math.max(1, page), totalPages);
@@ -67,4 +67,8 @@ export async function fetchUser(id, signal) {
 
   sessionCache.set(cacheKey, user);
   return user;
+}
+
+export function clearSessionCache() {
+  sessionCache.clear();
 }

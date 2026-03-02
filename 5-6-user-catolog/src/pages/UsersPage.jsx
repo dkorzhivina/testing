@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { fetchUsers } from "../api/usersApi";
 import { useDebounce } from "../hooks/useDebounce";
 import { useToast } from "../context/ToastContext";
-import UserCard from "../components/UserCard";
+import VirtualUserList from "../components/VirtualUserList";
 import Pagination from "../components/Pagination";
 import Spinner from "../components/Spinner";
 import StateMessage from "../components/StateMessage";
@@ -43,7 +43,7 @@ export default function UsersPage() {
       });
 
     return () => controller.abort();
-  }, [page, debouncedSearch, retryKey]);
+  }, [page, debouncedSearch, retryKey, addToast]);
 
   function handlePageChange(newPage) {
     setPage(newPage);
@@ -100,9 +100,7 @@ export default function UsersPage() {
 
         {(status === "success" || (status === "loading" && users.length > 0)) && (
           <div className={`users-list${status === "loading" ? " users-list--fading" : ""}`}>
-            {users.map(user => (
-              <UserCard key={user.id} user={user} />
-            ))}
+            <VirtualUserList users={users} />
           </div>
         )}
       </div>

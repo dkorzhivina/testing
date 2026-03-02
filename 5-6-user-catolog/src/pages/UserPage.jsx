@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { fetchUser } from "../api/usersApi";
 import { useToast } from "../context/ToastContext";
@@ -13,7 +13,7 @@ export default function UserPage() {
   const { addToast } = useToast();
   const abortRef = useRef(null);
 
-  function load() {
+  const load = useCallback(() => {
     if (abortRef.current) abortRef.current.abort();
     const controller = new AbortController();
     abortRef.current = controller;
@@ -29,12 +29,12 @@ export default function UserPage() {
         setStatus("error");
         addToast(err.message || "Не удалось загрузить пользователя");
       });
-  }
+  }, [id, addToast]);
 
   useEffect(() => {
     load();
     return () => abortRef.current?.abort();
-  }, [id]);
+  }, [load]);
 
   return (
     <div className="page">

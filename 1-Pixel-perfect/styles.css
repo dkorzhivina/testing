@@ -62,6 +62,12 @@ body {
   opacity: 0.9;
 }
 
+.logo:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .main {
   display: grid;
   place-items: center;

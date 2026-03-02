@@ -60,15 +60,13 @@
 - Навигация с клавиатуры, focus и aria-атрибуты, индикатор силы пароля, autocomplete.
 - Стилизация своя (CSS), фиолетовая палитра.
 
-### 5-6-user-catolog — полностью
+### 5-6-user-catolog — полностью, но есть проблемы с загрузкой данных, я не понимаю в чем причина ()
 - Список пользователей (API JSONPlaceholder), пагинация, поиск с debounce, страница `/users/:id`.
 - React Router, Fetch + AbortController, отмена запросов при смене поиска и уходе со страницы.
 - Состояния: loading, empty, error, retry.
 - Архитектура: слой api, страницы, UI-компоненты.
 - Задание 6: lazy-маршруты, Error Boundary, виртуализация (react-window при списке >8), 5–8 тестов (Vitest + Testing Library), ESLint + Prettier, README с архитектурой и стратегией тестов.
 - Бонусы: кэш последнего результата в сессии, глобальный toast для ошибок, CI (GitHub Actions: lint + test), в README — про Lighthouse.
-
-**Частично:** скриншоты 360/768/1280 (или короткое видео) не добавлены — по условию опционально.
 
 ---
 
@@ -82,7 +80,7 @@
 
 4. **Виртуализация в 5-6** — включается только при наличии `ResizeObserver` и измеренных размерах контейнера; в тестах (jsdom без ResizeObserver) рендерится обычный список, чтобы тесты не падали.
 
-5. **TypeScript** — не используется; в требованиях указано «желательно, но не обязательно» — выбран единый JS для всех React-проектов.
+5. **TypeScript** — не используовала, так как плохо еще его знаю; использовала JS для всех React-проектов.
 
 6. **Доступность** — везде видимый focus (`:focus` / `:focus-visible`), семантика (header, main, button, label, nav, role/aria где нужно), стили для disabled и корректный tab-order без лишних tabindex.
 
@@ -92,6 +90,55 @@
 
 ---
 
-## Скриншоты / видео
+## Скриншоты 
+**Задание 1**
+360
+<img width="1663" height="1398" alt="image" src="https://github.com/user-attachments/assets/037e20a2-4ab4-43fc-a81b-6859038ab421" />
+768
+<img width="1673" height="1355" alt="image" src="https://github.com/user-attachments/assets/0734bc7d-cdf6-4ef9-9312-18ddeecb3727" />
+1280
+<img width="2784" height="1427" alt="image" src="https://github.com/user-attachments/assets/9d1f2a02-36b7-4b9e-9b3a-8e69f2aa601e" />
 
-Скриншоты 360 / 768 / 1280 или короткое видео — по условию опциональны; при желании их можно добавить в репозиторий и указать в этом разделе ссылками.
+**Задание 2**
+360
+<img width="1701" height="1375" alt="image" src="https://github.com/user-attachments/assets/440aab01-ccb4-42f6-a27a-ea29c25552b4" />
+768
+<img width="1671" height="1366" alt="image" src="https://github.com/user-attachments/assets/b909d5e5-dba9-4836-a92e-8db572a0f6f3" />
+1280
+<img width="2740" height="1373" alt="image" src="https://github.com/user-attachments/assets/0920a3bb-766d-440b-b0e3-9755984af513" />
+
+**Задание 3**
+360
+<img width="1653" height="1378" alt="image" src="https://github.com/user-attachments/assets/d54e8826-f935-4365-a200-f1c7db18242b" />
+768
+<img width="1676" height="1239" alt="image" src="https://github.com/user-attachments/assets/f13a2951-a427-460e-90e8-4bacfade0bc4" />
+1280
+<img width="2789" height="1371" alt="image" src="https://github.com/user-attachments/assets/7785d0fa-afc8-403f-a62a-c0459828230f" />
+
+**Задание 4**
+360
+<img width="1687" height="1346" alt="image" src="https://github.com/user-attachments/assets/ecf1a4f2-77ce-48d2-92dd-03f8f1689d54" />
+<img width="1687" height="1321" alt="image" src="https://github.com/user-attachments/assets/34465663-481d-4e02-95c5-93b6af45196f" />
+768
+<img width="1683" height="1300" alt="image" src="https://github.com/user-attachments/assets/ec589597-618f-4d5a-acbd-923df7999bb1" />
+1280
+<img width="2750" height="1428" alt="image" src="https://github.com/user-attachments/assets/fad3e4cb-a741-451c-8c5b-20efa9eb0497" />
+<img width="2744" height="1372" alt="image" src="https://github.com/user-attachments/assets/10017437-bc9b-49bf-8e19-73dd4998cae0" />
+
+**Задание 5-6**
+360
+<img width="1660" height="1379" alt="image" src="https://github.com/user-attachments/assets/8f775e7c-0896-4d94-a3c8-48f509fd98cb" />
+768
+<img width="1651" height="1377" alt="image" src="https://github.com/user-attachments/assets/1182e602-f415-46cb-af30-488d09de5845" />
+1280
+<img width="2745" height="1383" alt="image" src="https://github.com/user-attachments/assets/3ce915d0-8704-4360-8069-6d3821f16d85" />
+
+
+
+
+
+
+
+
+
+

@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Card</title>
+    <title>Product Card — MyStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,27 +19,30 @@
     <main class="main">
         <div class="container">
             <article class="card">
-                <div class="card_barge">NEW</div>
-                
-                <div class="card_icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                        <circle cx="12" cy="12" r="10"/>
-                    </svg>
+                <span class="card_badge">NEW</span>
+
+                <div class="card_visual">
+                    <div class="card_icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3v18M3 12h18" />
+                            <circle cx="12" cy="12" r="9" />
+                        </svg>
+                    </div>
                 </div>
 
-        <h2 class="card_title">Nike Air Force 1</h2>
-        <p class="card_price">15000 ₽</p>
-        <p class="card_description">
-            Минималистичные кроссовки в белом цвете с бежевыми деталями выглядят свежо и современно. 
-            Красный акцент придаёт модели характер и делает образ более выразительным.
-        </p>
+                <h2 class="card_title">Nike Air Force 1</h2>
+                <p class="card_price">15 000 ₽</p>
+                <p class="card_description">
+                    Минималистичные кроссовки в белом цвете с бежевыми деталями выглядят свежо и современно.
+                    Красный акцент придаёт модели характер и делает образ более выразительным.
+                </p>
 
-        <div class="card_action">
-            <button class="btn btn--primary">Купить сейчас</button>
-            <button class="btn btn--secondary">Отложить</button>                    
+                <div class="card_actions">
+                    <button class="btn btn--primary">Купить сейчас</button>
+                    <button class="btn btn--secondary">Отложить</button>
+                </div>
+            </article>
         </div>
-    </article>
-    </div>
     </main>
 </body>
 </html>
